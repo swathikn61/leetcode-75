@@ -11,12 +11,17 @@ public:
         int right = s.length() - 1;
 
         while (left < right) {
+
+            //if left is not vowel
             while (left < right && !isVowel(s[left])) {
                 left++;
             }
+            
+            //if right is not vowel
             while (left < right && !isVowel(s[right])) {
                 right--;
             }
+            
             swap(s[left], s[right]);
             left++;
             right--;
