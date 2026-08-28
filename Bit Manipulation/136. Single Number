@@ -1,0 +1,13 @@
+class Solution {
+public:
+
+//Every element appears twice except one -> XOR
+
+    int singleNumber(vector<int>& nums) {
+        int ans = 0;
+        for(int x: nums){ 
+            ans ^= x; //0 ^ 4 ^ 1 ^ 2 ^ 1 ^ 2 = 4 -> 1 ^ 1 = 0 and 2 ^ 2 = 0
+        }
+        return ans;
+    }
+};
